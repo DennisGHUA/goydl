@@ -46,19 +46,19 @@ type Info struct {
 	AutomaticCaptions struct {
 	} `json:"automatic_captions"`
 	Duration      float64     `json:"duration"`
-	AgeLimit      int         `json:"age_limit"`
+	AgeLimit      float64         `json:"age_limit"`
 	Annotations   interface{} `json:"annotations"`
 	Chapters      interface{} `json:"chapters"`
 	WebpageURL    string      `json:"webpage_url"`
-	ViewCount     int         `json:"view_count"`
-	LikeCount     int         `json:"like_count"`
-	DislikeCount  int         `json:"dislike_count"`
+	ViewCount     float64         `json:"view_count"`
+	LikeCount     float64         `json:"like_count"`
+	DislikeCount  float64         `json:"dislike_count"`
 	AverageRating float64     `json:"average_rating"`
 	Formats       []struct {
 		Ext         string      `json:"ext"`
 		FormatNote  string      `json:"format_note"`
 		Acodec      string      `json:"acodec"`
-		Abr         int         `json:"abr,omitempty"`
+		Abr         float64         `json:"abr,omitempty"`
 		Container   string      `json:"container,omitempty"`
 		FormatID    string      `json:"format_id"`
 		URL         string      `json:"url"`
@@ -66,10 +66,10 @@ type Info struct {
 		Width       interface{} `json:"width,omitempty"`
 		Height      interface{} `json:"height,omitempty"`
 		Tbr         float64     `json:"tbr,omitempty"`
-		Asr         int         `json:"asr,omitempty"`
+		Asr         float64         `json:"asr,omitempty"`
 		Fps         interface{} `json:"fps,omitempty"`
 		Language    interface{} `json:"language,omitempty"`
-		Filesize    int         `json:"filesize,omitempty"`
+		Filesize    float64         `json:"filesize,omitempty"`
 		Vcodec      string      `json:"vcodec"`
 		Format      string      `json:"format"`
 		Protocol    string      `json:"protocol"`
@@ -102,18 +102,18 @@ type Info struct {
 	RequestedSubtitles interface{} `json:"requested_subtitles"`
 	RequestedFormats   []struct {
 		Ext         string      `json:"ext"`
-		Height      int         `json:"height,omitempty"`
+		Height      float64     `json:"height,omitempty"`
 		FormatNote  string      `json:"format_note"`
 		Vcodec      string      `json:"vcodec"`
 		FormatID    string      `json:"format_id"`
 		URL         string      `json:"url"`
 		ManifestURL string      `json:"manifest_url,omitempty"`
-		Width       int         `json:"width,omitempty"`
+		Width       float64         `json:"width,omitempty"`
 		Tbr         float64     `json:"tbr"`
 		Asr         interface{} `json:"asr,omitempty"`
-		Fps         int         `json:"fps,omitempty"`
+		Fps         float64         `json:"fps,omitempty"`
 		Language    interface{} `json:"language,omitempty"`
-		Filesize    int         `json:"filesize"`
+		Filesize    float64         `json:"filesize"`
 		Acodec      string      `json:"acodec"`
 		Format      string      `json:"format"`
 		Protocol    string      `json:"protocol"`
@@ -125,19 +125,19 @@ type Info struct {
 			AcceptLanguage string `json:"Accept-Language"`
 		} `json:"http_headers"`
 		PlayerURL string `json:"player_url,omitempty"`
-		Abr       int    `json:"abr,omitempty"`
+		Abr       float64    `json:"abr,omitempty"`
 	} `json:"requested_formats"`
 	Format         string      `json:"format"`
 	FormatID       string      `json:"format_id"`
-	Width          int         `json:"width"`
-	Height         int         `json:"height"`
+	Width          float64         `json:"width"`
+	Height         float64         `json:"height"`
 	Resolution     interface{} `json:"resolution"`
-	Fps            int         `json:"fps"`
+	Fps            float64         `json:"fps"`
 	Vcodec         string      `json:"vcodec"`
 	Vbr            interface{} `json:"vbr"`
 	StretchedRatio interface{} `json:"stretched_ratio"`
 	Acodec         string      `json:"acodec"`
-	Abr            int         `json:"abr"`
+	Abr            float64     `json:"abr"`
 	Ext            string      `json:"ext"`
 	Fulltitle      string      `json:"fulltitle"`
 	Filename       string      `json:"_filename"`
